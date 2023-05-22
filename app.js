@@ -8,11 +8,11 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
 var surveyRoutes = require('./routes/survey');
-app.use('/survey', expressStatic('./public'));
+app.use('/survey', express.static('./public'));
 app.use('/survey', surveyRoutes);
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.cend('Hello World!');
 });
 
 var server = app.listen(3000, function () {
