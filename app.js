@@ -12,9 +12,9 @@ app.use('/survey', express.static('./public'));
 app.use('/survey', surveyRoutes);
 
 app.get('/', function (req, res) {
-  res.cend('Hello World!');
+  res.end('Hello World!');
 });
 
-var server = app.listen(3000, function () {
-  console.log('App is running on port 3000');
+var server = app.listen(2999, function () {
+  console.log('App is running on port 2999');
 });
