@@ -14,6 +14,9 @@ app.use('/survey', surveyRoutes);
 app.get('/', function (req, res) {
   res.end('Hello World!');
 });
+app.get('/survey', function (req, res) {
+  res.file('./public/survey.html');
+});
 
 var server = app.listen(2999, function () {
   console.log('App is running on port 2999');
