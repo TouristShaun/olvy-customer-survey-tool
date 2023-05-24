@@ -6,7 +6,12 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function(req, res) {
-  // Todo: Implement survey form submission
+  // TODO: Implement survey form submission
+  console.log('Survey submitted');
+  console.log(req.name);
+  console.log(req.email);
+  console.log(req.feedback);
+  res.end('Thank you for submitting your feedback.');
 });
 
 module.exports = router;
