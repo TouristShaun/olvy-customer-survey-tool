@@ -4,20 +4,12 @@ var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
-
-var surveyRoutes = require('./routes/survey');
-app.use('/survey', express.static('./public'));
-app.use('/survey', surveyRoutes);
+app.use('/survey', express.static('__dirname__ + '/public'));
 
 app.get('/', function (req, res) {
-  res.end('Hello World!');
-});
-app.get('/survey', function (req, res) {
-  res.file('./public/survey.html');
+  res.send('Hello World!');
 });
 
-var server = app.listen(2999, function () {
-  console.log('App is running on port 2999');
+var server = app.listen(3000, function () {
+  console.log('App is running on port 3000');
 });
