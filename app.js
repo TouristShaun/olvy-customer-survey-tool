@@ -4,7 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-app.use('/survey', express.static('__dirname__ + '/public'));
+app.use('/survey', express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
